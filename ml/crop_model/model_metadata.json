@@ -1,0 +1,192 @@
+{
+  "model_type": "5-Model Ensemble (Decision Tree + SVM + KNN + Extra Trees + Naive Bayes)",
+  "models": {
+    "decision_tree": {
+      "accuracy": 0.7197,
+      "params": {
+        "max_depth": 20,
+        "criterion": "gini",
+        "class_weight": "balanced"
+      }
+    },
+    "svm": {
+      "accuracy": 0.7492,
+      "params": {
+        "kernel": "rbf",
+        "C": 15.0,
+        "gamma": "scale",
+        "probability": true
+      }
+    },
+    "knn": {
+      "accuracy": 0.7106,
+      "params": {
+        "n_neighbors": 7,
+        "weights": "distance",
+        "metric": "euclidean"
+      }
+    },
+    "extra_trees": {
+      "accuracy": 0.8424,
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 22,
+        "class_weight": "balanced"
+      }
+    },
+    "naive_bayes": {
+      "accuracy": 0.7235,
+      "params": {
+        "var_smoothing": 1e-08,
+        "type": "Gaussian"
+      }
+    }
+  },
+  "ensemble_weights": {
+    "dt": 1,
+    "svm": 3,
+    "knn": 2,
+    "et": 3,
+    "nb": 1
+  },
+  "voting_strategy": "soft",
+  "accuracy": 0.7992,
+  "cv_accuracy": 0.8452,
+  "cv_std": 0.0111,
+  "features": [
+    "N",
+    "P",
+    "K",
+    "temperature",
+    "humidity",
+    "ph",
+    "rainfall"
+  ],
+  "classes": [
+    "banana",
+    "barley",
+    "chickpea",
+    "cotton",
+    "garlic",
+    "groundnut",
+    "jute",
+    "lentil",
+    "maize",
+    "mango",
+    "moong",
+    "mustard",
+    "onion",
+    "pigeonpea",
+    "potato",
+    "rice",
+    "sorghum",
+    "soybean",
+    "sugarcane",
+    "sunflower",
+    "tomato",
+    "wheat"
+  ],
+  "n_classes": 22,
+  "crops_config": {
+    "banana": {
+      "season": "Year-round (tropical)",
+      "description": "India's highest-produced fruit crop and a nutritionally dense tropical horticultural crop. Requires warm temperatures, high humidity, abundant water, and deep, well-drained fertile alluvial or loamy soils. Grown year-round in Tamil Nadu, Andhra Pradesh, Maharashtra, and Gujarat. Provides significant income to smallholder farmers due to high market value and continuous bearing nature. Rich in potassium, Vitamin B6, and natural sugars. Modern tissue culture planting material significantly boosts yield with superior disease resistance."
+    },
+    "barley": {
+      "season": "Rabi (October - March)",
+      "description": "A robust Rabi cereal crop known for its tolerance of poor soil conditions and cold climates. Widely grown in Rajasthan, Uttar Pradesh, Madhya Pradesh, and Haryana. Used extensively for malting, brewing, food, and livestock feed. Its drought-tolerance makes it a strategic crop for semi-arid environments where other cereals struggle."
+    },
+    "chickpea": {
+      "season": "Rabi (October - March)",
+      "description": "The most important pulse crop in India, often called 'Bengal Gram'. A biological nitrogen-fixer that naturally enriches soil fertility, reducing the need for synthetic fertilizers. Drought-tolerant and best suited for rainfed black cotton soils of Madhya Pradesh, Rajasthan, and Maharashtra. Rich in protein, fiber, and micronutrients, it is critical for dietary balance in rural and urban India."
+    },
+    "cotton": {
+      "season": "Kharif (April - October)",
+      "description": "India's most important commercial fiber crop and the backbone of its textile industry. Best suited for deep black cotton soil (regur/Vertisol), which retains moisture efficiently. Requires a long warm growing season with adequate sunshine for boll development. Cultivated primarily in Gujarat, Maharashtra, Telangana, and Andhra Pradesh. Bt cotton varieties now dominate acreage, offering integrated pest management advantages against bollworm complexes while delivering improved fiber quality and higher lint yields."
+    },
+    "garlic": {
+      "season": "Rabi (October - February)",
+      "description": "A premium high-value bulb crop with both culinary and medicinal significance. Requires cool temperatures (below 20\u00b0C) during the vegetative phase for proper bulb differentiation and a warm, dry period for bulb curing. Grows best in well-drained sandy loam to clay loam soils with good organic content. Major cultivation zones include Madhya Pradesh, Gujarat, Rajasthan, and Uttar Pradesh. Rich in allicin, flavonoids, and organosulfur compounds with proven antimicrobial and cardiovascular health benefits, commanding premium commodity prices."
+    },
+    "groundnut": {
+      "season": "Kharif (June - October)",
+      "description": "India's most important oilseed crop by area and a critical source of protein (25\u201328%) and edible oil (45\u201350%). Thrives in well-drained sandy loam or red laterite soils with abundant sunshine. Dominant in Andhra Pradesh, Gujarat, Tamil Nadu, and Karnataka. An underground-fruiting legume that fixes atmospheric nitrogen, improving soil health for subsequent crops. The oil cake is an excellent livestock feed supplement high in protein."
+    },
+    "jute": {
+      "season": "Kharif (March - August)",
+      "description": "A bast natural fiber crop requiring hot, humid conditions and heavy monsoon rainfall. Predominantly cultivated in the fertile alluvial soils of West Bengal, Assam, Bihar, and Odisha along the Gangetic delta. The long-stem fibers are extracted through retting \u2014 soaking in water \u2014 producing golden, lustrous fibers used for sackcloth, hessian, and eco-friendly packaging. It biodegrades rapidly and serves as an environmentally sustainable alternative to synthetic fibers, with growing demand in global green markets."
+    },
+    "lentil": {
+      "season": "Rabi (October - February)",
+      "description": "A high-protein pulse crop thriving in cool, dry weather during the Rabi season. Known for atmospheric nitrogen fixation (60\u201390 kg N/ha annually), significantly improving soil health for subsequent crops. Widely cultivated in Madhya Pradesh, Uttar Pradesh, and Bihar. Its short crop cycle of 90\u2013110 days and low water requirement make it economically attractive for resource-limited farmers."
+    },
+    "maize": {
+      "season": "Kharif / Rabi (Dual Season)",
+      "description": "A highly versatile cereal crop cultivated for food, animal fodder, poultry feed, and industrial starch and ethanol production. Adapts well to diverse climatic zones and soil types across India. Its dual-season suitability makes it a preferred choice for farmers seeking year-round productivity in states like Karnataka, Andhra Pradesh, and Rajasthan."
+    },
+    "mango": {
+      "season": "Summer (March - June)",
+      "description": "The 'King of Fruits' and India's national fruit \u2014 the country's most important commercial fruit crop with over 1,000 cultivated varieties. Requires a distinct dry season to induce flowering, followed by warm humid conditions for fruit development. Thrives in deep, well-drained alluvial or lateritic loamy soils. Dominant in Uttar Pradesh, Andhra Pradesh, Maharashtra, and Karnataka. India accounts for over 40% of global mango production. Alphonso, Dashehari, Langra, and Kesar are premium export-quality cultivars commanding premium prices."
+    },
+    "moong": {
+      "season": "Kharif (June - September)",
+      "description": "A short-duration summer pulse (60\u201370 days) rich in digestible plant protein and essential amino acids. Excels in sandy loam soils with adequate drainage and warm, moderately humid conditions. A valuable intercrop and rotation crop that naturally replenishes soil nitrogen. Widely grown in Rajasthan, Maharashtra, and Andhra Pradesh. Highly demanded by consumers for its culinary versatility and nutritional profile."
+    },
+    "mustard": {
+      "season": "Rabi (October - March)",
+      "description": "The most important Rabi oilseed crop in northern India, particularly dominant in Rajasthan, Haryana, and Uttar Pradesh. Requires cool dry weather during vegetative growth with moderate temperatures for seed filling and maturation. The seeds contain 36\u201348% oil used for cooking, and the oil cake is a protein-rich cattle feed. Well-adapted to loamy and sandy loam soils, contributing significantly to India's edible oil self-sufficiency goals."
+    },
+    "onion": {
+      "season": "Rabi (October - February)",
+      "description": "An economically critical vegetable crop with consistent high market demand and export value. India is the world's second-largest onion producer and a major global exporter. Prefers loamy, well-drained soils with moderate fertility. Sensitive to excess moisture and heavy rainfall, which causes bulb rot. Primarily cultivated in Maharashtra, Karnataka, Andhra Pradesh, and Madhya Pradesh. Rich in quercetin, sulfur compounds, and Vitamin C. Price volatility makes it both a high-risk and high-reward crop for farmer income."
+    },
+    "pigeonpea": {
+      "season": "Kharif (June - October)",
+      "description": "A perennial/annual legume and the second-most important pulse in India after chickpea. Remarkable drought tolerance owing to its deep taproot system, making it well-adapted to erratic rainfall. A key crop in the peninsular Indian states of Maharashtra, Andhra Pradesh, and Karnataka. Functions as an excellent intercrop with cotton, sorghum, and maize, while simultaneously fixing atmospheric nitrogen to restore soil fertility."
+    },
+    "potato": {
+      "season": "Rabi (October - February)",
+      "description": "A cool-season vegetable crop and India's third most important food crop. India is the world's second-largest potato producer. Requires well-drained, loose, sandy loam to loamy soil rich in organic matter, with temperatures below 22\u00b0C for optimal tuber formation. Cultivated primarily in Uttar Pradesh, West Bengal, Bihar, and Gujarat. High in carbohydrates, Vitamin C, and potassium. A vital crop for food security, processing industry (chips, starch), and cold chain logistics development in rural India."
+    },
+    "rice": {
+      "season": "Kharif (June - October)",
+      "description": "A staple cereal crop ideal for warm, humid conditions with heavy irrigation. Thrives in low-lying paddy fields with clay or loamy soil that retains water effectively. Rice is the backbone of Indian food security, accounting for over 40% of total food grain production. Best cultivated in states like West Bengal, Punjab, Uttar Pradesh, and Andhra Pradesh."
+    },
+    "sorghum": {
+      "season": "Kharif (June - September)",
+      "description": "An exceptional drought-tolerant cereal ideal for dryland and rainfed farming systems. Thrives in semi-arid regions of Maharashtra, Karnataka, and Rajasthan where water availability is limited. Essential for food security in low-rainfall zones, serving as both a staple grain and high-quality livestock fodder. Its deep root system enables efficient water extraction."
+    },
+    "soybean": {
+      "season": "Kharif (June - October)",
+      "description": "A dual-purpose crop providing high-protein oilseed and nitrogen from biological fixation. The primary oilseed crop in Madhya Pradesh and Maharashtra, often called the 'Golden Bean'. Contains 18\u201322% oil and 38\u201342% protein, making it the world's most important protein crop. Thrives in well-drained black (Vertisol) and red soils characteristic of central India. The oil cake is a premium ingredient in poultry, fish, and livestock feed formulations."
+    },
+    "sugarcane": {
+      "season": "Annual (10-18 months)",
+      "description": "A long-duration tropical commercial crop forming the backbone of India's sugar industry \u2014 the world's largest. Produces sucrose-rich stalks used for sugar, jaggery, ethanol, and bioenergy. Requires tropical to subtropical climate with abundant water supply through irrigation or high rainfall. Major cultivating states include Uttar Pradesh, Maharashtra, Karnataka, and Tamil Nadu. The crop residue (bagasse) is an important biofuel for sugar mill co-generation, and press mud is a valuable organic soil amendment."
+    },
+    "sunflower": {
+      "season": "Kharif / Rabi (Both Seasons)",
+      "description": "A high-yielding oilseed crop with remarkable adaptability across diverse soils and climates. The seeds contain 40\u201350% light-colored, health-promoting polyunsaturated oil rich in Vitamin E. Its unique phototropism \u2014 ability to track sunlight \u2014 maximizes photosynthesis efficiency. A strong candidate for double-cropping due to dual-season suitability in Karnataka, Maharashtra, and Andhra Pradesh. The stalks and heads serve as valuable livestock fodder after harvest."
+    },
+    "tomato": {
+      "season": "Year-round (varies by region)",
+      "description": "The most widely consumed vegetable in India and a high-value commercial crop. Requires moderate temperatures (18\u201330\u00b0C), adequate fertility, and well-drained soil rich in organic matter. Sensitive to frost and waterlogging. Major producing states include Andhra Pradesh, Madhya Pradesh, Maharashtra, and Karnataka. Rich in lycopene, Vitamin C, and antioxidants. Cultivated year-round across different agro-climatic zones with appropriate variety selection, making it economically rewarding for progressive farmers."
+    },
+    "wheat": {
+      "season": "Rabi (November - March)",
+      "description": "India's primary Rabi crop and a critical staple grain. Requires cool, dry weather during the growing phase and moderate moisture. Well-suited for the Indo-Gangetic plains of Punjab, Haryana, and Uttar Pradesh. Rich in carbohydrates and proteins, it is fundamental to Indian dietary patterns and the agrarian economy."
+    }
+  },
+  "feature_importance": {
+    "N": 0.1853,
+    "P": 0.1318,
+    "K": 0.1972,
+    "temperature": 0.1493,
+    "humidity": 0.1145,
+    "ph": 0.0888,
+    "rainfall": 0.1331
+  },
+  "training_samples": 5280,
+  "test_samples": 1320,
+  "total_samples": 6600
+}

@@ -1,0 +1,40 @@
+services:
+  - type: web
+    name: agrismart-api
+    env: python
+    region: oregon
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      # ── MongoDB Atlas (required) ──────────────────────────────────
+      - key: MONGODB_URL
+        sync: false          # Set in Render dashboard: mongodb+srv://...
+      - key: MONGODB_DB_NAME
+        value: agrismart
+
+      # ── JWT ───────────────────────────────────────────────────────
+      - key: JWT_SECRET_KEY
+        generateValue: true  # Render auto-generates a secure random value
+      - key: JWT_ALGORITHM
+        value: HS256
+      - key: JWT_ACCESS_TOKEN_EXPIRE_MINUTES
+        value: 1440
+
+      # ── Groq AI (required for chatbot & disease detection) ────────
+      - key: GROQ_API_KEY
+        sync: false          # Set in Render dashboard
+
+      # ── App Config ────────────────────────────────────────────────
+      - key: APP_ENV
+        value: production
+
+      # ── CORS — set to your Vercel frontend URL ────────────────────
+      # Example: https://agrismart.vercel.app,https://agrismart-git-master.vercel.app
+      - key: CORS_ORIGINS
+        sync: false          # Set in Render dashboard
+
+      # ── Python version ────────────────────────────────────────────
+      - key: PYTHON_VERSION
+        value: "3.11.0"
